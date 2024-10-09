@@ -1,52 +1,47 @@
-arte 1: Criando Tabelas no HackMD
-HackMD é uma ferramenta de edição colaborativa que utiliza Markdown. Para criar uma tabela, você pode usar a seguinte sintaxe:
+Passo 1: Criando uma Tabela no HackMD.io
 
-Crie uma nova nota no HackMD.
-Use a sintaxe de Markdown para criar uma tabela. Aqui está um exemplo:
-markdown
-Copiar código
-| Nome    | Idade | Cidade     |
-|---------|-------|------------|
-| João    | 25    | São Paulo  |
-| Maria   | 30    | Rio de Janeiro |
-| Ana     | 22    | Belo Horizonte |
-Visualize a tabela: No HackMD, você pode alternar entre o modo de edição e visualização para ver como sua tabela ficará.
-Parte 2: Exportando a Tabela para MySQL
-Após criar sua tabela no HackMD, você precisará transformá-la em comandos SQL para inserir os dados no MySQL.
+HackMD.io é um editor de markdown colaborativo que permite criar tabelas usando a sintaxe markdown. Para criar uma tabela, siga estas etapas:
 
-Transforme a tabela Markdown em comandos SQL: Com base na tabela do exemplo acima, você precisaria gerar comandos SQL como:
+Abra o HackMD.io e crie um novo documento ou abra um existente.
+
+
+Por exemplo: 
+| ID | Nome | Idade |
+|----|------|-------|
+| 1  | João | 25    |
+|----|------|-------|
+| 2  | Ana  | 30    |
+![image](https://github.com/user-attachments/assets/a260e9fb-d3a8-4002-93f4-64f54bc56f93)
+
+Passo 2: Exportando a Tabela do HackMD.io
+
+Para exportar a tabela do HackMD.io, siga estas etapas:
+
+Clique nos três pontos no canto superior direito do documento.
+Selecione "Exportar" no menu suspenso.
+Escolha "CSV" como o formato de exportação.
+Clique em "Exportar" para baixar o arquivo CSV.
+Passo 3: Importando a Tabela para o MySQL
+
+Para importar a tabela para o MySQL, siga estas etapas:
+
+Abra o seu cliente MySQL (por exemplo, phpMyAdmin, MySQL Workbench ou a ferramenta de linha de comando).
+Crie um novo banco de dados ou selecione um existente.
+Crie uma nova tabela com os mesmos nomes de coluna da sua tabela HackMD.io:
 sql
-Copiar código
-CREATE TABLE pessoas (
-    nome VARCHAR(50),
-    idade INT,
-    cidade VARCHAR(50)
-);
+ |
+ |
+ v
 
-INSERT INTO pessoas (nome, idade, cidade) VALUES ('João', 25, 'São Paulo');
-INSERT INTO pessoas (nome, idade, cidade) VALUES ('Maria', 30, 'Rio de Janeiro');
-INSERT INTO pessoas (nome, idade, cidade) VALUES ('Ana', 22, 'Belo Horizonte');
-Acesse seu banco de dados MySQL:
+CREATE TABLE minha_tabela (
+  ID INT,
+  Nome VARCHAR(255),
+  Idade INT
+); 
+LOAD DATA INFILE 'caminho/para/seu/arquivo.csv' INTO TABLE minha_tabela FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';
 
-Abra seu terminal ou cliente MySQL.
-Conecte-se ao seu banco de dados:
-bash
-Copiar código
-mysql -u seu_usuario -p
-Crie a tabela no MySQL:
 
-Copie o comando CREATE TABLE e cole no seu cliente MySQL para criar a tabela.
-Insira os dados:
 
-Copie e cole os comandos INSERT INTO que você gerou anteriormente para adicionar os dados à tabela.
-Verifique os dados:
+Substitua "caminho/para/seu/arquivo.csv" pelo caminho real do seu arquivo CSV.
 
-Para verificar se os dados foram inseridos corretamente, use:
-sql
-Copiar código
-SELECT * FROM pessoas;
-Dicas Finais
-Sempre faça backup do seu banco de dados antes de fazer alterações.
-Você pode automatizar o processo de conversão de Markdown para SQL usando scripts, dependendo da complexidade dos seus dados.
-Explore as funcionalidades do HackMD, como colaboração em tempo real, para trabalhar em equipe.
-Pronto! Agora você sabe como criar tabelas no HackMD e inseri-las em um banco de dados MySQL. Se tiver alguma dúvida ou precisar de mais informações, sinta-se à vontade para perguntar!
+Pronto! Você criou com sucesso uma tabela no HackMD.io e a importou para o MySQL.
