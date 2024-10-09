@@ -1,0 +1,37 @@
+Passo a Passo para Criar Tabelas Usando MySQL com Interface Gráfica
+Abrir o Software:
+
+Inicie o MySQL Workbench ou qualquer outra ferramenta gráfica que você esteja usando.
+Conectar ao Servidor:
+
+Clique na opção para conectar-se ao servidor MySQL. Insira suas credenciais (usuário e senha) e selecione o servidor.
+Criar um Novo Schema:
+
+No painel à esquerda, você verá a opção de "Schemas" ou "Bancos de Dados".
+Clique com o botão direito e escolha "Create Schema" (Criar Esquema).
+Dê um nome ao seu novo schema e confirme a criação.
+Selecionar o Schema:
+
+Após criar o schema, clique duas vezes sobre ele para selecioná-lo. Isso fará com que todas as operações subsequentes sejam feitas dentro desse schema.
+Criar uma Nova Tabela:
+
+Clique com o botão direito na pasta "Tables" (Tabelas) dentro do schema que você criou.
+Escolha a opção "Create Table" (Criar Tabela).
+Uma nova janela se abrirá para que você defina os detalhes da tabela.
+Definir Estrutura da Tabela:
+
+Na janela de criação da tabela, você verá uma grade onde pode adicionar colunas:
+Nome da Coluna: Especifique o nome que deseja para a coluna.
+Tipo de Dado: Selecione o tipo de dado (como INT, VARCHAR, DATE, etc.).
+Atributos: Marque opções como "Not Null" se a coluna não pode aceitar valores nulos.
+Chave Primária: Se desejar, defina uma coluna como chave primária.
+Salvar a Tabela:
+
+Depois de definir todas as colunas e suas características, clique em "Apply" (Aplicar).
+O software irá mostrar um resumo do SQL que será executado. Revise e, se estiver tudo certo, clique em "Apply" novamente para criar a tabela.
+Verificar a Tabela:
+
+Após a criação, você pode voltar ao painel principal, clicar em "Tables" e visualizar a nova tabela na lista.
+Para ver a estrutura da tabela, clique com o botão direito na tabela e selecione "Alter Table" (Alterar Tabela) para visualizar as colunas e suas definições.
+Conclusão
+Usando a interface gráfica, você pode criar schemas e tabelas de forma intuitiva e visual. Essa abordagem é útil, especialmente para quem está começando com bancos de dados e prefere não lidar diretamente com comandos SQL. Se precisar realizar operações adicionais, como inserir dados ou criar relacionamentos, a interface também facilita essas tarefas!
